@@ -1,0 +1,70 @@
+
+
+---------------------------------------
+ChatSonic
+Yes, Chatsonic by Writesonic is the first AI writing tool to add GPT-4 capabilities to it's platform.
+Samanyou Garg owns Chatsonic
+
+----------------------------------------------
+Florence
+trained with text-to-image pairs, is now integrated as production-ready computer vision service in Azure Cognitive Service for Vision
+ capabilities such as analyzing images, reading text and detecting faces with prebuilt image tagging
+you can also customize it with your own data.
+It's a multimodal model.-->text and image
+alsooo video
+paper:https://arxiv.org/pdf/2303.10130.pdf
+-----------------------------------
+llama
+open source
+privacy 
+your fine tuning
+english only--> others are sucks
+from 7B to 70B parameters (7B, 13B, 70B). The pretrained models come with significant improvements over the Llama 1 models, including being trained on 40% more tokens, having a much longer context length (4k tokens 🤯), and using grouped-query attention for fast inference of the 70B model🔥!
+
+paper:https://arxiv.org/pdf/2307.09288.pdf
+
+----------------------------------------------
+gpt
+
+gpt4:
+1 trillion parameters
+ They first go through an unsupervised pre-training period using a large corpus of data. Then they go through a supervised fine-tuning period to guide the model. Models can be fine-tuned to specific tasks.
+25,000  word
+
+gpt3:
+neural network is a model with over 175 billion machine learning parameters
+GPT-3 is first trained through a supervised testing phase and then a reinforcement phase
+ GPT-3 is not constantly learning. It has been pre-trained
+GPT-3 has a prompt limit of about 2,048 tokens
+---------
+dall e
+dVAE -->Discrete Variational Auto-Encoder
+diffusion model --->Denoising Diffusion Probabilistic Models 
+Zero-Shot Text-to-Image Generation
+clip-->evaluate the alignment between images and text
+----------------
+bard
+It aims to allow for more natural language queries, rather than keywords, for search. Bard's AI is trained around natural-sounding conversational queries and responses
+ChatGPT's responses are based on data available up to April 2023, whereas Google Bard will be based on up-to-date
+
+BERT doesn't accept user input. It works behind the scenes to improve Google Search results. Bard is Google's latest AI, a chatbot that responds to questions and follows user commands.
+
+
+Gemini 
+
+LaMDA 
+PaLM
+
+
+---------------
+tools:
+lang chain
+hugging face
+
+
+
+--------------------------------------------
+
+links:
+https://arxiv.org/pdf/2108.07258.pdf
+https://www.techtarget.com/whatis/feature/Foundation-models-explained-Everything-you-need-to-know
