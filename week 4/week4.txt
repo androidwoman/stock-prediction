@@ -1,0 +1,136 @@
+link:
+https://github.com/openai/weak-to-strong
+----------------------------------------------------
+Combining weak-to-strong generalization with scalable oversight
+https://aligned.substack.com/p/combining-w2sg-with-scalable-oversight
+Combining W2SG and SO:
+Train reward models with W2SG to guide SO.
+Use W2SG-trained models to validate SO decisions.
+Other methods:
+Train the model to follow SO rules directly.
+Use W2SG to improve the model's interpretability.
+-------------------------------------
+clip Zero-Shot Image Classification
+https://huggingface.co/openai/clip-vit-large-patch14
+--------------------------------------
+step by step 
+outcome supervision, which provides feedback based on a final result, or process supervision, which provides feedback for each individual step in a chain-of-thought
+https://openai.com/research/improving-mathematical-reasoning-with-process-supervision#ref-1-0
+
+Using process supervision on AI math reasoning models not only leads to safer, aligned outcomes but surprisingly also boosts performance, potentially driving wider adoption and safer AI
+
+
+problem with ai --->hallucinations
+we use a large-scale model to supervise small-scale
+model training.------------------>In order to remove our dependence
+on costly human feedback
+ we have genarator that create answers---> we can make it better with RL ---> not in this article :/
+using  best-of-N search ---> we should train reward train model
+ base model ---> gpt 4 with math mix 
+The PRM800K training
+set contains 800K step-level labels across 75K solutions to 12K problems
+---------------------------------------------------------------------
+*********************************
+-------------------------------
+کنفرانس acl
+-------------------------------
+نالج گراف بیاد توضیح بده
+-----------------------------
+preciion llm (حجم llm  کم بشه)
+--------------------
+post proccing ---> لایه اخر رو تغیرات میدی 
+احتمال اینکه جملات با  احساسات 
+decoder
+-----------------------------
+برو رو کگل -------> لاما 
+
+کولب 
+-------------------------
+تولید متن مثبت اندیشی ----> پاسخ مثبت 
+روانشناسی
+-----------------------------
+سمنتیک 
+پیپر با کد 
+----------------------
+نور در قم 
+جی پی تی حدی
+a 100 80g
+----------------------
+عصر گویش
+پارت ai 
+دادمان تک
+
+---------------------
+بیت رهبری 
+---------------------
+llama with google clob 
+------------------------
+چند تا  state of art  رو ترکیب کنم 
+درسته precition  کردم
+-------------------------------------------
+ساختن knowlage graph 
+----------------------
+ویکی پدیا یک نالج گراف ک میاد موجدیت شناسایی به هم وصل 
+موتور چیزه ساخته
+هر کدوم از مقاله های ویکی چه ضریبی
+-------------------------------------
+دوازده هزار تا ادم مردم سیاسی مردم گراف
+---------------------------------
+ریاضی اینکه کانفینگ 
+رو ست کنی
+------------------------------
+
+
+******************************
+-----------------------------------------------------------
+some finetuning with llama
+https://colab.research.google.com/github/MuhammadMoinFaisal/LargeLanguageModelsProjects/blob/main/Fine_Tune_Llama2_Generating_data_OpenAI/Fine_Tune_Llama_2_by_generating_data_from_the_LLM_OpenAI.ipynb#scrollTo=5eAvh3nsA36t
+-----------------------------------
+TinyGPT-V: Efficient Multimodal Large Language Model via Small Backbones
+merely a 24G GPU for training and an 8G GPU or CPU for inference
+https://arxiv.org/abs/2312.16862v1
+LoRA: این تکنیک به مدل زبان اجازه می‌دهد تا با استفاده از یک شبکه عصبی کوچک، پارامترهای خود را به طور کارآمد تنظیم کند.
+Q-Former: این تکنیک به رمزگذار تصویری کمک می‌کند تا اطلاعات بصری را به طور دقیق‌تر با مدل زبان همسو کند
+--------------------------------------------------------------------------------------------------------
+ Agent System with
+Large Language Models
+---------------------------------------------
+https://arxiv.org/ftp/arxiv/papers/2312/2312.15713.pdf
+روش اول: آموزش مدل از ابتدا (PersianLLaMA-Zero)
+
+در این روش، از دو مجموعه‌ی داده‌ی OSCAR و ویکی‌پدیا فارسی برای آموزش مدل استفاده شده است. مجموعه‌ی داده‌های OSCAR شامل ۲۳ میلیون متن فارسی از وب و مجموعه‌ی داده‌های ویکی‌پدیا فارسی شامل ۲.۴ میلیون متن فارسی است. برای آموزش مدل از چارچوب DeepSpeed و روش TencentPretrain استفاده شده است.
+
+روش دوم: آموزش مدل با استفاده از روش LoRA (Low-Rank Adaptation)
+
+در این روش، از مدل LLaMA-13B انگلیسی به عنوان مدل پایه و روش LoRA برای آموزش PersianLLaMA استفاده شده است. روش LoRA به مدل اجازه می‌دهد تا با استفاده از مقدار کمی داده‌ی فارسی، دانش مدل LLaMA-13B را به زبان فارسی تعمیم دهد.
+-----------------------------------------------------------------------------------------
+dall e 
+256*256 image --->32*32 image dvae
+256 BPE-encoded text
+tokens with the 32 × 32 = 1024 image tokens
+ELB
+
+
+ we tokenize text ---> use BPE-encoded
+and then positional encoding +pading
+
+we tokenize image using  dvae +pading
+---> add to model and train with a transformer our loss function is a cross entropy function diffrent from text and image 
+dvae--> you have a vector --> use codebook --> convert to number
+https://github.com/lucidrains/DALLE-pytorch/blob/main/dalle_pytorch/dalle_pytorch.py
+----------------------------------
+Lora ---> microsoft
+highlight importent things 
+box of importent lego
+idea ---> delete linear dependent column 
+delta w = a.b ---> reduce the dimention 
+forozen input w ??? idk:/
+in the paper --> attention weight --> Q and V 
+https://arxiv.org/abs/2106.09685
+-------------------------------------------
+Byte Pair Encoding
+create word and add frecuency and then find pair with max frecuency and set it in our database 
+and do this like a k time ----> hyper param 
+
+The GPT-2 and RoBERTa tokenizers (which are pretty similar) have a clever way to deal with this: they don’t look at words as being written with Unicode characters, but with bytes. This way the base vocabulary has a small size (256), but every character you can think of will still be included and not end up being converted to the unknown token. This trick is called byte-level BPE.
+---------------------------------------------

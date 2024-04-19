@@ -1,0 +1,235 @@
+--------------------------------------------------------------------
+open ai :
+---------------------------------------------------------------------
+
+"Weak-to-strong generalization":
+"https://openai.com/research/weak-to-strong-generalization"
+
+## Weak-to-strong generalization: A promising approach to AI alignment
+
+**Introduction:**
+
+Artificial intelligence (AI) is rapidly advancing, and AI systems are becoming more powerful and complex. This has raised concerns about AI alignment, which means ensuring that AI systems are safe and beneficial for humans.
+
+**Weak-to-strong generalization:**
+
+Weak-to-strong generalization is a novel approach to AI alignment that uses a smaller model to supervise a larger model. The smaller model is called the "teacher" and the larger model is called the "student." The teacher teaches the student how to behave and avoid engaging in undesirable behaviors.
+
+**Advantages of weak-to-strong generalization:**
+
+Weak-to-strong generalization has several potential advantages for alignment:
+
+* It could allow us to train AI systems that are smarter than us. The teacher can transfer its knowledge to the student, even if the student is smarter than the teacher.
+* It could help us make AI systems safer. The teacher can teach the student how to avoid engaging in dangerous or harmful behaviors.
+* It could help us make AI systems more useful. The teacher can teach the student how to perform useful tasks.
+
+**Challenges of weak-to-strong generalization:**
+
+Weak-to-strong generalization is still in its early stages of development, and there are several challenges that need to be addressed:
+
+* How do we train the teacher? Training the teacher can be a difficult task, as the teacher needs to have a deep understanding of how to behave safely and beneficially.
+* How do we ensure that the teacher is trustworthy? If the teacher is not trustworthy, it could teach the student how to engage in undesirable behaviors.
+* How do we ensure that the student obeys the teacher? The student may not obey the teacher, especially if the student is smarter than the teacher.
+
+**Conclusion:**
+
+Weak-to-strong generalization is a promising approach to AI alignment, but there are still challenges that need to be addressed. More research on this approach is needed to determine whether it can help solve the AI alignment problem.
+
+---------------------------------------------------------------------------
+
+"Practices for Governing Agentic AI Systems":
+"https://openai.com/research/practices-for-governing-agentic-ai-systems"
+Agentic AI systems are AI systems that can act and make decisions independently.
+These systems have great potential to solve complex problems and improve human lives, but they also pose risks.
+To ensure that agentic AI systems are developed and used safely and responsibly, we need to establish appropriate governance practices.
+These practices should be transparent, accountable, safe, aligned with human values, and ethical.
+Some key challenges in developing agentic AI systems include the alignment problem, the control problem, and the explanation problem.
+Despite these challenges, agentic AI is a promising technology with the potential to revolutionize many aspects of our lives. With careful research and development, we can ensure that agentic AI is used for good.
+
+----------------------------------------------------------------------------------
+DALL·E 3 system card
+"https://openai.com/research/dall-e-3-system-card"
+########################################
+use VQ-VAE
+"Neural Discrete Representation Learning" paper from 2018
+Embeddings: The discrete codes from the codebook are used as input to the decoder, similar to word embeddings in NLP
+Gradient descent: Both the encoder/decoder network and the codebook vectors are trained using gradient descent
+1.Discrete latent space: VQ-VAEs use discrete codes rather than continuous variables to represent the latent space. This leads to several advantages, such as improved efficiency and the ability to model discrete features.
+
+2.Vector quantization: This technique is used to map continuous representations from the encoder to discrete codes in the codebook.
+
+3.Codebook: A collection of discrete vectors that represent the possible latent states.
+Prior and posterior distributions: VQ-VAEs use categorical distributions rather than Gaussian distributions for both the prior 
+and posterior distributions over the latent codes.
+
+4.Speaker identity: One application of VQ-VAEs is generating different voices by learning the latent structure of language and equipping the decoder with a speaker identity.
+
+5.Gaussian reparameterization trick: This technique, used in traditional VAEs, is not applicable to VQ-VAEs due to the use of discrete variables.
+#########################################
+ChatGPT helps DALL-E 3 understand your vague requests. Sometimes, you might describe an image with just a few words. ChatGPT can take those words and turn them into a more detailed description for DALL-E 3, so it knows exactly what you want.
+challanges:
+mage quality: Dall-E 3 struggles with high-resolution images and intricate details, leading to blurry or artificial-looking outputs.
+Realistic people: Generating images of real people, especially faces, remains a challenge, often resulting in inaccurate or offensive portrayals.
+Complex concepts: Translating abstract or nuanced ideas into visuals can be difficult, leading to ambiguous or confusing images.
+Bias: Dall-E 3 inherits biases from its training data, potentially generating unfair or discriminatory outputs.
+Creative control: Precisely controlling the desired image remains a challenge, making it difficult to achieve the exact vision you have in mind.
+Accessibility: Currently, Dall-E 3 is only available to a select few, raising concerns about equal access and democratization of creativity.
+Cost: The potential cost of using Dall-E 3 is unknown, potentially limiting its broader adoption.
+Ethical considerations: The ability to create realistic yet fake images raises concerns about misinformation, deepfakes, and ownership of digital creations.
+######################################################
+"https://cdn.openai.com/papers/dall-e-3.pdf"
+
+often ignore words or confuse the meaning of prompts. We hypothesize that this
+issue stems from noisy and inaccurate image captions in the training dataset
+----------------------------------------------------------------------------------------------------------------
+September 25, 2023
+GPT-4v: Large Language Models with Few-Shot Learning
+https://openai.com/research/gpt-4v-system-card
+Be My Eyes 
+various tasks with few-shot learning,
+challenges like bias, interpretability, and control
+Complexity of the model makes it difficult to interpret and control.
+------------------------------------------------------------------
+Improving mathematical reasoning with process supervision
+"https://openai.com/research/improving-mathematical-reasoning-with-process-supervision"
+Problem: Large language models (LLMs) are not good at mathematical reasoning.
+Solution: Process supervision, a method that provides feedback on the steps of problem solving, can improve the mathematical reasoning of LLMs.
+Experiments: Process supervision was shown to significantly improve the performance of GPT-3 on a variety of mathematical problems.
+Applications: This approach could be used to improve the performance of LLMs on a variety of tasks that require mathematical reasoning, such as solving math problems, writing mathematical proofs, and generating mathematical explanations.
+Limitations: Process supervision requires a dataset of math problems with labeled solution steps.
+Future work: Develop methods for process supervision that do not require labeled data and investigate the performance of LLMs on real-world mathematical problems.
+Key technical details:
+
+LLM used: GPT-3 with 175 billion parameters
+Architecture: Transformer-based decoder-only architecture
+Dataset: 10,000 math problems with labeled solution steps
+Process supervision: Implemented as an additional layer that provides reinforcement learning rewards and penalties to the LLM based on the correctness of its problem-solving steps.
+Remaining challenges:
+
+Collecting and labeling math datasets is time-consuming and expensive.
+Process supervision can increase the complexity of LLMs.
+----------------------------------------------------------------------------
+Language models can explain neurons in language models
+https://openai.com/research/language-models-can-explain-neurons-in-language-models
+ using LLMs to explain the behavior of smaller language models. 
+The authors used GPT-3 to generate text explanations for the activity of neurons in GLUE, a language model that is trained on a variety of natural language processing tasks.
+ The results showed that GPT-3 was able to successfully generate explanations that linked the neural activity to meaningful linguistic concepts, such as words, phrases, and sentences. 
+
+Limitations :
+The study was conducted on a single LLM (GPT-3) and a single dataset (GLUE).
+---------------------------------------------------------------------------------------------------------
+GPTs are GPTs: An early look at the labor market impact potential of large language models
+create public gpt that is expert in everything
+and effect of gpt
+----------------------------------------------------
+Language Models are Few-Shot Learners
+https://arxiv.org/abs/2005.14165
+Unlike traditional methods that require fine-tuning for each task, GPT-3 shows impressive performance with minimal examples or instructions.
+
+-----------------------------------------------------------------
+google ai 
+----------------------------------------------------------------
+https://sites.research.google/contrails/
+Contrails are line-shaped clouds formed behind airplanes when water vapor condenses around particles emitted by aircraft engines. These contrails contribute to global warming by trapping heat, with nighttime contrails being more impactful. Google AI is used to predict and avoid contrails by analyzing massive amounts of weather, satellite, and flight data. In partnership with American Airlines, AI predictions reduced contrails by 54%, but flights avoiding contrails burned 2% more fuel. The contrail avoidance method aims to be a cost-effective climate solution. The process involves analyzing labeled satellite imagery, training a computer vision model, integrating predictions into pilot workflows, and evaluating performance
+------------------------------------------------------------------------
+ML Kit  in android 
+https://android-developers.googleblog.com/2023/12/a-new-foundation-for-ai-on-android.html
+Smart Reply in Gboard within WhatsApp using Gemini Nano on Pixel 8 Pro
+LoRA (Low Rank Adaptation):
+A powerful concept that allows app developers to customize large language models (LLMs) for their specific applications.
+Developers can use their own training data to create a small "LoRA adapter."
+The LoRA adapter is then loaded by AICore and combined with the Gemini Nano model to create a fine-tuned LLM for the app's specific use cases.
+----------------------------------------------------------------------------------
+https://blog.research.google/2023/05/building-better-pangenomes-to-improve.html
+A pangenome is a complete set of all the genetic variants of a species. It includes the reference genome, as well as all the genetic diversity found in the population of that species
+Challenges:
+Pangenomes can help scientists to better understand genetic diversity in a species
+DNA sequencing can be expensive and time-consuming.
+Assembling DNA sequences can be challenging, especially if there is a lot of genetic diversity.
+Interpreting pangenome data can be difficult.
+-----------------------------------------------------------------------
+Deep Reinforcement Learning for Air Traffic Control
+The reinforcement learning model uses a deep neural network to learn ----> value function
+The value function tells the agent how desirable each particular state is.
+agent uses the Monte Carlo Tree Search (MCTS) algorithm to find the best action in each state.
+MCTS works by randomly simulating different actions and selecting the action that leads to the best outcome.
+------> computationally expensive
+-----------------------------------------------------------------------------
+TextMesh: Generation of Realistic 3D Meshes From Text Prompts
+https://arxiv.org/pdf/2304.12439.pdf
+use 2-d models for 3d
+often generate neural radiance fields (NeRFs) instead of conventional 3D meshes
+tend to produce oversaturated models, giving the output a cartoonish appearance
+------------------------------------------------------------
+Microsoft
+---------------------------------------------------------------
+VALL-E
+https://arxiv.org/pdf/2301.02111.pdf?ref=louisbouchard.ai
+encoder-decoder
+------------------------------------------------------------------------
+meta
+------------------------------------------
+Generating Biographies
+----------------------------
+llama:
+the best performances are not achieved by the largest models, but by smaller models trained on more data
+------------------------------------------
+ zero-shot :
+ zero-shot learning, in which your model learns how to classify classes that it hasn’t seen before.
+ like --> clip by open ai
+--------------------------------------------
+No Language Left Behind: Scaling Human-Centered Machine Translation
+200 language barrier while ensuring safe, high quality results
+
+*********************************
+-------------------------------
+کنفرانس acl
+-------------------------------
+نالج گراف بیاد توضیح بده
+-----------------------------
+preciion llm (حجم llm  کم بشه)
+--------------------
+post proccing ---> لایه اخر رو تغیرات میدی 
+احتمال اینکه جملات با  احساسات 
+decoder
+-----------------------------
+برو رو کگل -------> لاما 
+
+کولب 
+-------------------------
+تولید متن مثبت اندیشی ----> پاسخ مثبت 
+روانشناسی
+-----------------------------
+سمنتیک 
+پیپر با کد 
+----------------------
+نور در قم 
+جی پی تی حدی
+a 100 80g
+----------------------
+عصر گویش
+پارت ai 
+دادمان تک
+
+---------------------
+بیت رهبری 
+---------------------
+llama with google clob 
+------------------------
+چند تا  state of art  رو ترکیب کنم 
+درسته precition  کردم
+-------------------------------------------
+ساختن knowlage graph 
+----------------------
+ویکی پدیا یک نالج گراف ک میاد موجدیت شناسایی به هم وصل 
+موتور چیزه ساخته
+هر کدوم از مقاله های ویکی چه ضریبی
+-------------------------------------
+دوازده هزار تا ادم مردم سیاسی مردم گراف
+---------------------------------
+ریاضی اینکه کانفینگ 
+رو ست کنی
+------------------------------
+
+
+******************************

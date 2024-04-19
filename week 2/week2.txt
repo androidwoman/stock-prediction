@@ -1,0 +1,87 @@
+recurrent neural networks-->stock prediction in three day 
+we use same wight for every day
+we dont use it that much-->vanishing , exploding 
+
+exploding --> w=2(too many day exploding gradient)
+vanishing w<1 (w=0.5 super close to zero)
+---------------------------
+LSTM
+2 path , complicated unit--> short term with wieght long term no wieght
+uses sigmoid(0,1) and tan h activation function(-1,1)
+becouse of * we use what percentage of long term memory remember
+we have potential memory and percentage of that and sum it with above answer --->update long term memory --> input gate
+calculate potential short term memory from long term memory 
+potential memory to remember and percentage of short term memory and use them all--->update short term memory --> output gate
+Q--> how we create this network why we do that like this how we update weight?
+---------------------------------------------------------------------------------
+Word Embedding and word2vec 
+NN dont work well with words but work well with numbers
+simple idea --> use random num for every word--> doesnt use meaning of word we need context of word in the data set
+we need algorithem that have similer number for similer word and keep track if we use the word as a posivtive way or negetive
+the goal is the precict the next word in the pharase --> use backprogapation and soft max and cross validation --> 
+troll is greate --> 100-->010
+we use two wieght for every word --> show it in a plot --> when two words are similer the value should be simimler
+include more context --> continuous bag-of-words troll is greate --> 101-->010
+skip-gram--> 010 --> 101
+in practice, instead of using just 2 activation functions to create 2 embeddings
+per word, people often use 100 or more activation functions to create a lot of embeddings
+instead of just having a vocabulary of 4 words and phrases, word2vec might
+have a vocabulary of about 3 million words---> big but slow
+solve with Negative Sampling --> use some random word we dont want to optimize for every step
+
+Q-->Word Embedding and word2vec diff and usecases?
+-----------------------------------------------------------------------------------------------------------
+seq 2 seq
+encoder decoder model--> english to spanish--> challange diffrent lenght input and output
+encoder: word embeding to lstm with layer and every layer have thier own wight and output of embeding --> lsmt l=1 --> lastm l-2----> output called context vector (two long term two shord term)
+decoder --> context vector to lstm with input of eos ---> lstm with input (output of first lstm)
+when stop ? until get eos in output 
+use teacher forcing in train
+Q--> example
+-------------------------------------------------------------------
+attention
+seq2seq problem is didnt work well when the input is big 
+and somtimes some word are so inportent and they should never be forgotten like dont eat --> do eat 
+impo!:
+that said the main idea of attention adding an additional path for each input
+value so that each step of the decoder can directly access those values is consistent for all encoder decoder
+models with attention
+
+find sim between first short memory of encoder and short memory of decoder and  second short memory of encoder and short memory of decoder(do it for second one too) --> ( cos sim )-----> dot product
+lets go --> eos --> sim(lets and eos) and sime (go and eos)--> softmax(0,1) --> sum ---> fully connected layer 
+help --> what percentage of each encoded input word should be used to help predict the next output word
+
+--------------------------------------------------------------------------------------
+Transformer Neural Networks
+positional encoding ---> keep track of word order
+have something called self-attention which is a mechanism to correctly associate the word it  with the word pitza 
+find sim bitween every two word --> sim ( pitza and it )>>>>
+lets go ---> lets convert to two value , go convert to two value ---> create query and key for lets and key for go 
+find sim between query of lets and key of lets>>> sim between query of lets and key of go 
+---> use softmax --> what percentage ? -->
+lets--> 100% go-->0 %---> create value from lets and go --> multiply by value and sume it -->solf attention for word lets
+wieght for query are the same/key the same /value the same ---> we can calculated at the same time -->run fast
+use multi layer of attention 
+residual connections--> add self attention to word and position encode value
+
+1.input word embedding
+2.positional encoding
+3.self-attention 
+4.residual connections
+
+encoder decoder attention:
+--->create query from output and key from input and use dot prodoct and then soft max and see what percentage of input is use when we translate the first word --->actully create value from input and then multiply by output of softmax---> add the pair of code toghter and find encode dicode attention
+
+
+add another set of residual connections that allow the encoder decoder attention
+to focus on the relationships between the output words and the input words without having to preserve the
+self-attention or word and position encoding that happened earlier
+
+output connect to fully connect network and then another softmax --> which word is selected from out output
+
+
+---------------------------------------------------------------------------------------
+Alice TN networks
+Alice TN networks are a type of recurrent neural network (RNN)
+Alice TN networks are based on the idea of attention, which is a mechanism that allows the network to focus on specific parts of the input sequence when making predictions.
+--------------------------------------------------------------------------------------------
